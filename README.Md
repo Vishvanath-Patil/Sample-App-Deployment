@@ -11,9 +11,9 @@ eksctl utils associate-iam-oidc-provider --region ap-south-1 --cluster my-cluste
 https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/install/iam_policy.json
 ```
 ### Steps to Create Policy 
-      1. Browse above link on google
-      2. Copy and paste the JSON 
-      3. Provide Same name i.e AWSLoadBalancerControllerIAMPolicy
+####   1. Browse above link on google
+####   2. Copy and paste the JSON 
+####   3. Provide Same name i.e AWSLoadBalancerControllerIAMPolicy
 
 ## Create IAM service account
 ```bash
