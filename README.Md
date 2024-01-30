@@ -20,6 +20,18 @@ Note : REPLACE `attach-policy-arn`
 ```bash
 eksctl create iamserviceaccount --cluster=my-cluster --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::237924323600:policy/AWSLoadBalancerControllerIAMPolicy --region ap-south-1 --approve
 ```
+## Install helm 
+```bash
+sudo snap install helm --classic
+```
+a. Add the eks-charts repository.
+```bash
+helm repo add eks https://aws.github.io/eks-charts
+```
+b. Update your local repo to make sure that you have the most recent charts.
+```bash
+helm repo update eks
+```
 ## Install AWS Load Balancer controller add-on
 ```bash
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=my-cluster --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller --set replicaCount=1
