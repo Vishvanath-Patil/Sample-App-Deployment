@@ -16,6 +16,7 @@ https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v
 ####   3. Provide Same name i.e AWSLoadBalancerControllerIAMPolicy
 
 ## Create IAM service account
+Note : REPLACE `attach-policy-arn`
 ```bash
 eksctl create iamserviceaccount --cluster=my-cluster --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::237924323600:policy/AWSLoadBalancerControllerIAMPolicy --region ap-south-1 --approve
 ```
