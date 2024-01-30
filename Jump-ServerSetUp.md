@@ -16,7 +16,7 @@
 - Clone your application's code repository onto the EC2 instance:
 
 ``` shell
-git clone https://github.com/Vishvanath-Patil/Three-Tier-Application-Deployment-Project.git
+https://github.com/Vishvanath-Patil/Sample-App-Deployment.git
 ```
 
 ### Step 3: IAM Configuration
