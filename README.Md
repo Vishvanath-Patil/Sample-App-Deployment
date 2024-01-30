@@ -14,6 +14,7 @@ eksctl create iamserviceaccount --cluster=my-cluster --namespace=kube-system --n
 ```bash
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=my-cluster --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller --set replicaCount=1
 ```
+AWS Official Document : https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html
 
 ## Tags to add in public subnet if you get unable to auto disover subnet error:
 ```bash
