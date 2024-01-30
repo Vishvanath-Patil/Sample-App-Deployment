@@ -10,7 +10,7 @@ eksctl utils associate-iam-oidc-provider --region ap-south-1 --cluster my-cluste
 ```bash
 eksctl create iamserviceaccount --cluster=my-cluster --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::237924323600:policy/AWSLoadBalancerControllerIAMPolicy --region ap-south-1 --approve
 ```
-## Install AWS Load Balancer controller
+## Install AWS Load Balancer controller add-on
 ```bash
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=my-cluster --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller --set replicaCount=1
 ```
