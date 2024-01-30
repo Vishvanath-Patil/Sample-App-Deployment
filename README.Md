@@ -6,6 +6,15 @@ eksctl create cluster --name my-cluster  --region ap-south-1 --nodegroup-name my
 ```bash
 eksctl utils associate-iam-oidc-provider --region ap-south-1 --cluster my-cluster --approve
 ```
+## Create AWSLoadBalancerControllerIAMPolicy (Manually)
+```bash
+https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/install/iam_policy.json
+```
+### Steps to Create Policy 
+      1. Browse above link on google
+      2. Copy and paste the JSON 
+      3. Provide Same name i.e AWSLoadBalancerControllerIAMPolicy
+
 ## Create IAM service account
 ```bash
 eksctl create iamserviceaccount --cluster=my-cluster --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::237924323600:policy/AWSLoadBalancerControllerIAMPolicy --region ap-south-1 --approve
